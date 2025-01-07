@@ -1,0 +1,23 @@
+---
+title: "Mail merge with RMarkdow"
+author: "TAHA ANOUAR"
+date: "2025-01-04"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+personalized_info <- read.csv("meeting_times.csv", stringsAsFactors = FALSE)
+name <- personalized_info$name[i]
+time <- personalized_info$meeting_time[i]
+```
+
+Dear `r name`,
+ 
+Your meeting time is `r time`.
+ 
+See you then!
+
